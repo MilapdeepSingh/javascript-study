@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="cl">List 1</li>
+        <li>List 1</li>
+        <li class="cl">List 1</li>
+    </ul>
+    <h2>Heading 1</h2>
+    <p class="itro">Paragraph </p>
+    <div id="div1">
+        <h2>Heading 2</h2>
+        <p class="intro">Paragraph 1</p>
+        <h2>Heading 3</h2>
+        <p class="intro">Paragraph 2</p>
+    </div>
+    <script>
+        var liCl = document.getElementsByClassName('cl');
+        console.log(liCl);
+        for(var i=0; i < liCl.length; i++){
+            liCl[i].innerHTML = "Hello";
+        }
+        let div1 = document.getElementById('div1');
+        let head = div1.getElementsByTagName('h2');
+        for(i = 0; i < head.length; i++){
+            head[i].innerHTML = "Hello Heading";
+        }
+        let divAllPara= document.querySelectorAll('p.intro');
+        console.log(divAllPara);
+        for(i= 0; i < divAllPara.length; i++){
+            divAllPara[i].innerHTML = `Hello Paragraph ${i+1}`;
+        }
+    </script>
+</body>
+</html>
